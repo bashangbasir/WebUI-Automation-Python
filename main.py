@@ -13,12 +13,10 @@ def setup (browser):
 
     #Implicit wait 
     driver.implicitly_wait(3)
-
     return driver  
 
 def teardown(driver):
     driver.quit()
-    
 
 if __name__ == "__main__":
     
@@ -36,7 +34,7 @@ if __name__ == "__main__":
     #get the list of the result that have been verified is iphone11 related
     ebay_results = ebay_page.get_searchresult()
     
-    
+
     
     #teardown(driver)
 

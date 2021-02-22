@@ -18,11 +18,9 @@ class EbayPage():
     def __init__(self, driver):
         self.driver = driver
 
-
     def load_page(self):
         self.driver.get(self.URL)
         
-
     def search_item(self,item):
         self.driver.find_element(*self.SEARCH_TEXTBOX_LOCATOR).send_keys(item)
         self.driver.find_element(*self.SEARCH_BUTTON_LOCATOR).click()
