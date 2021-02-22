@@ -7,7 +7,7 @@ def setup (browser):
     if browser.lower() == "chrome":
         driver = webdriver.Chrome("./resources/chromedriver.exe")
     elif browser.lower() == "firefox":
-        driver = webdriver.Firefox()
+        driver = webdriver.Firefox(executable_path="./resources/geckodriver.exe")
     else:
         raise Exception("{} Browser is not supported".format(browser))
 
@@ -22,16 +22,17 @@ def teardown(driver):
 
 if __name__ == "__main__":
     
-    driver = setup("Chrome")
+    driver = setup("firefox")
     amazon_page = AmazonPage(driver)
     amazon_page.load_page()
     amazon_page.search_item("iPhone 11")
-    amazon_page.get_searchresult_webelements()
-    
+    #get the list of the result that have been verified is iphone11 related
+    amazon_result = amazon_page.get_searchresult()
+    #print(len(amazon_result), amazon_result)
 
-    # ebay_page = EbayPage(driver)
-    # ebay_page.load_page()
-    # ebay_page.search_item("iPhone 11")
+    ebay_page = EbayPage(driver)
+    ebay_page.load_page()
+    ebay_page.search_item("iPhone 11")
     
     teardown(driver)
 
