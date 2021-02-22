@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 
 class AmazonPage():
     
-    WEBSITE_NAME = "Amazon.com"
+    WEBSITE_NAME = "Amazon"
     BASE_URL = "https://www.amazon.com/"
     SEARCH_TEXTBOX_LOCATOR = (By.ID,"twotabsearchtextbox")
     SEARCH_BUTTON_LOCATOR = (By.ID,"nav-search-submit-button")

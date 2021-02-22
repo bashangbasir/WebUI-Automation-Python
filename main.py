@@ -23,16 +23,20 @@ def teardown(driver):
 if __name__ == "__main__":
     
     driver = setup("firefox")
+    
     amazon_page = AmazonPage(driver)
     amazon_page.load_page()
     amazon_page.search_item("iPhone 11")
     #get the list of the result that have been verified is iphone11 related
-    amazon_result = amazon_page.get_searchresult()
-    #print(len(amazon_result), amazon_result)
+    amazon_results = amazon_page.get_searchresult()
 
     ebay_page = EbayPage(driver)
     ebay_page.load_page()
     ebay_page.search_item("iPhone 11")
+    #get the list of the result that have been verified is iphone11 related
+    ebay_results = ebay_page.get_searchresult()
     
-    teardown(driver)
+    
+    
+    #teardown(driver)
 
