@@ -18,3 +18,6 @@ python -m pipenv shell
 ```bash
 python main.py
 ```
+
+### Notes
+- Place the webdriver in ./resources folder
