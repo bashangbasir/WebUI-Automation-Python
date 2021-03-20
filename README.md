@@ -1,5 +1,6 @@
-# Setel-WebAutomation
-## Setel Web Automatio Task 
+# Web Automation for searching price in Amazon and Ebay
+
+## Web Automation 
 
 ### Installation 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pipenv
